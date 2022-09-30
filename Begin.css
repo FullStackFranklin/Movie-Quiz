@@ -6,4 +6,10 @@ body {
     background-size: cover;
   }
 
-  
+  * {
+    box-sizing: border-box;
+    font-family: fantasy;
+    margin: 0; /*reset margin*/
+    padding: 0;/*reset padding*/
+}
+

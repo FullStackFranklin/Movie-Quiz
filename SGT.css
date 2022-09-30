@@ -7,4 +7,57 @@
     background-attachment: fixed;
   }
 
-  
+  * {
+      box-sizing: border-box;
+      font-family: fantasy;
+      margin: 0; /*reset margin*/
+      padding: 0;/*reset padding*/
+  }
+ 
+
+
+  .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+  }
+
+  /*all children will be same width*/
+  .container > * {
+      width: 100%;
+  }
+   .flex-column {
+       display: flex;
+       flex-direction: column;
+   }
+  .flex-center {
+     justify-content: center;
+     align-items: center;
+ }
+
+  .button {
+      font-size: 20px;
+      padding: 25px 0;
+      width: 300px;
+      opacity: 0.7;
+      text-align: center;
+      border: 5px solid black;
+      margin-bottom: 20px;
+      text-decoration: none;
+      color: blue;
+      background-color: hotpink;
+  }
+
+  .button:hover {
+      cursor: pointer;
+      box-shadow: 0.9px 9px blue;
+      transform: translateY(0.1px);
+      transition: transform 130ms;
+     
+  }
+
+
