@@ -14,7 +14,7 @@
       padding: 0;/*reset padding*/
   }
  
-
+  
 
   .container {
       width: 100vw;
@@ -54,10 +54,8 @@
 
   .button:hover {
       cursor: pointer;
-      box-shadow: 0.9px 9px blue;
-      transform: translateY(0.1px);
-      transition: transform 130ms;
-     
+      box-shadow: 4px 8px rgb(75, 75, 224);
+      opacity: 0.4px;
   }
 
 
