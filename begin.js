@@ -3,7 +3,7 @@ const selections = Array.from(document.getElementsByClassName("question-text"));
 console.log(selections);
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let selectingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
@@ -55,7 +55,7 @@ let questions = [
         choice2: "22",
         choice3: "9",
         choice4: "15",
-        answer: 3
+        answer: 1
       },
       {
         question: "What is the one thing all players had in common?",
@@ -94,13 +94,18 @@ let questions = [
   const CORRECT_POINTS = 5;
   const MAX_QUESTIONS = 15;
 
+  //arrow functions & notes used to define our trivia container question and answers behavior
+  // Arrow Function Break Down:
+  // 1. Remove the word "function" and place arrow between the argument and opening body bracket
+  // 2. Remove the body braces and word "return" — the return is implied.
+  // 3. Remove the argument parentheses
   beginGame = () => {
       questionCounter = 0;
       score = 0;
       availableQuestions = [...questions];
       console.log(availableQuestions);
       getNewQuestion();
-  }
+  };
   
   getNewQuestion = () => {
       questionCounter++;
@@ -108,14 +113,26 @@ let questions = [
       currentQuestion = availableQuestions[questionIndex];
       question.innerText = currentQuestion.question;
 
-      selections.forEach(question => {
-          const number = question.dataset['number'];
-          question.innerHTML = currentQuestion["" + number];
-      })
+
       selections.forEach(choice => {
           const number = choice.dataset["number"];
           choice.innerHTML = currentQuestion["choice" + number];
-      })
+      });
+
+      availableQuestions.splice(questionIndex, 1);
+      selectingAnswers = true;
   };
+  
+  selections.forEach(choice => {
+      choice.addEventListener("click", e => {
+
+    selectingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+    console.log(selectedAnswer);
+    getNewQuestion();          
+          });
+      });
+  
 
   beginGame();
