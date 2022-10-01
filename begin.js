@@ -34,7 +34,7 @@ let questions = [
       answer: 1
     },
     {
-        question: "How much Won would the final player win?",
+        question: "How much Won/Money would the final player win?",
         choice1: "70 million won",
         choice2: "200 billion Won",
         choice3: "45.6 billion Won",
@@ -66,11 +66,11 @@ let questions = [
         answer: 4
       },
       {
-        question: "What color was the mask worn by 'The Front Man'?",
-        choice1: "Dark-Blue",
-        choice2: "Gold",
-        choice3: "Purple",
-        choice4: "Black",
+        question: "What was the name of the fourth game?",
+        choice1: "Hop Scotch",
+        choice2: "Squid Game",
+        choice3: "Tug of War",
+        choice4: "Marbles",
         answer: 4
       },
       {

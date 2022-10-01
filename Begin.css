@@ -8,13 +8,9 @@ body {
 
   * {
     box-sizing: border-box;
-    font-family: fantasy;
+    font-family: 'Slackey';
     margin: 0; /*reset margin*/
     padding: 0;/*reset padding*/
-}
-
-.hl {
-    color:rgba(201, 201, 209, 0.5);
 }
 
 /*game container centered on page*/
@@ -26,6 +22,8 @@ body {
     align-items: center;
     max-width: 750px;
     margin: 0 auto;
+    color: maroon;
+    padding: 12px;
 }
 
 /*all children will be same width*/
