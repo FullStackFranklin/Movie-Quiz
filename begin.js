@@ -107,6 +107,15 @@ let questions = [
       const questionIndex = Math.floor(Math.random() * availableQuestions.length);
       currentQuestion = availableQuestions[questionIndex];
       question.innerText = currentQuestion.question;
+
+      selections.forEach(question => {
+          const number = question.dataset['number'];
+          question.innerHTML = currentQuestion["" + number];
+      })
+      selections.forEach(choice => {
+          const number = choice.dataset["number"];
+          choice.innerHTML = currentQuestion["choice" + number];
+      })
   };
 
   beginGame();
