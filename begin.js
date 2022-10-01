@@ -103,15 +103,10 @@ let questions = [
   }
   
   getNewQuestion = () => {
-      questionCounter++
+      questionCounter++;
       const questionIndex = Math.floor(Math.random() * availableQuestions.length);
       currentQuestion = availableQuestions[questionIndex];
-      question.innerText = currentQuestion.questions;
-
-      selections.forEach(questions => {
-          const number = question.dataset["number"];
-      });
-
+      question.innerText = currentQuestion.question;
   };
 
   beginGame();
