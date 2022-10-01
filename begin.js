@@ -1,5 +1,6 @@
 const question = document.getElementById("question");
-const selections = Array.from(document.getElementById("question-text"));
+const selections = Array.from(document.getElementsByClassName("question-text"));
+console.log(selections);
 
 let currentQuestion = {};
 let acceptingAnswers = true;
@@ -89,4 +90,28 @@ let questions = [
         answer: 2
       }
   ];
+
+  const CORRECT_POINTS = 5;
+  const MAX_QUESTIONS = 15;
+
+  beginGame = () => {
+      questionCounter = 0;
+      score = 0;
+      availableQuestions = [...questions];
+      console.log(availableQuestions);
+      getNewQuestion();
+  }
   
+  getNewQuestion = () => {
+      questionCounter++
+      const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+      currentQuestion = availableQuestions[questionIndex];
+      question.innerText = currentQuestion.questions;
+
+      selections.forEach(questions => {
+          const number = question.dataset["number"];
+      });
+
+  };
+
+  beginGame();
