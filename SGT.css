@@ -9,11 +9,10 @@
 
   * {
       box-sizing: border-box;
-      font-family: fantasy;
+      font-family: 'Slackey';
       margin: 0; /*reset margin*/
       padding: 0;/*reset padding*/
   }
- 
   
 
   .container {
