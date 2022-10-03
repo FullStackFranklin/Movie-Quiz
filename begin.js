@@ -92,7 +92,7 @@ let questions = [
   ];
 
   const CORRECT_POINTS = 5;
-  const MAX_QUESTIONS = 15;
+  const MAX_QUESTIONS = 10;
 
   //arrow functions & notes used to define our trivia container question and answers behavior
   // Arrow Function Break Down:
@@ -108,6 +108,9 @@ let questions = [
   };
   
   getNewQuestion = () => {
+       if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
+           return location.assign("playerscores.html")
+       }        
       questionCounter++;
       const questionIndex = Math.floor(Math.random() * availableQuestions.length);
       currentQuestion = availableQuestions[questionIndex];
