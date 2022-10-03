@@ -133,8 +133,16 @@ let questions = [
     selectingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
-    console.log(selectedAnswer == currentQuestion.answer);   
-     
+    console.log(selectedAnswer == currentQuestion.answer);  
+    
+    //set default answer to incorrect then run check for correct answer
+    
+    const squidAnswers = "incorrect";
+    if (selectedAnswer == currentQuestion.answer) {
+         squidAnswers = "correct";
+    }
+     console.log(squidAnswers);
+
     getNewQuestion();          
           });
       });
