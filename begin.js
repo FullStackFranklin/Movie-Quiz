@@ -1,6 +1,6 @@
 const question = document.getElementById("question");
 const selections = Array.from(document.getElementsByClassName("question-text"));
-console.log(selections);
+//console.log(selections);
 
 let currentQuestion = {};
 let selectingAnswers = false;
@@ -133,11 +133,10 @@ let questions = [
     selectingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
-    console.log(selectedAnswer == currentQuestion.answer);  
+    //console.log(selectedAnswer == currentQuestion.answer);  
     
-    //set default answer to incorrect then run check for correct answer
-    
-    const squidAnswers = "incorrect";
+    //Define squidAnswers as incorrect but check for correct answers
+    let squidAnswers = "incorrect";
     if (selectedAnswer == currentQuestion.answer) {
          squidAnswers = "correct";
     }
