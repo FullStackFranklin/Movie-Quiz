@@ -108,6 +108,7 @@ let questions = [
   };
   
   getNewQuestion = () => {
+      //Below code will send the player to the players page to log in their name / initials
        if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
            return location.assign("playerscores.html")
        }        
@@ -132,7 +133,8 @@ let questions = [
     selectingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
-    console.log(selectedAnswer);
+    console.log(selectedAnswer == currentQuestion.answer);   
+     
     getNewQuestion();          
           });
       });
