@@ -20,7 +20,6 @@ body {
     background-color: rgb(233, 255, 105);
     font-family: 'Slackey';
 }
-
 .button:hover {
     cursor: pointer;
     box-shadow: 4px 8px rgb(116, 221, 138);

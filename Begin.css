@@ -13,6 +13,12 @@ body {
     padding: 0;/*reset padding*/
 }
 
+/*h3 { 
+    display: block;
+    text-align: right;
+    color: orangered;
+   
+ }*/
 /*game container centered on page*/
 .container {
     width: 100vw;
@@ -30,6 +36,7 @@ body {
 .container > * {
     width: 100%;
 }
+/*setting up attributes for the gaming container*/
 .question-container {
     display: flex;
     margin-bottom: 15px;
@@ -52,16 +59,15 @@ body {
 }
 .question-text {
     padding: 16px;
-    
 }
 .justify-center {
-justify-content: center;
+     justify-content: center;
 }
 .flex-center {
     justify-content: center;
     align-items: center;
 }
-/*First page button sytling*/
+/*multi-page button sytling*/
 .button {
     font-size: 20px;
     padding: 25px 0;
@@ -74,11 +80,16 @@ justify-content: center;
     color: green;
     background-color: rgb(233, 255, 105);
 }
-
 .button:hover {
     cursor: pointer;
     box-shadow: 4px 8px rgb(116, 221, 138);
     opacity: 0.4px;
 }
-
+/*adding colors to the correct and incorrect answers*/
+.correct {
+    background-color: rgba(11, 156, 55, 0.5);
+}
+.incorrect {
+    background-color: red;
+}
   

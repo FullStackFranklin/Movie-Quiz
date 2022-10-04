@@ -142,9 +142,15 @@ let questions = [
     }
      console.log(squidAnswers);
 
-    getNewQuestion();          
-          });
-      });
+     //gives red-incorrect and green-incorrect when player chooses answers
+     selectedChoice.parentElement.classList.add(squidAnswers);
+     setTimeout(() => {
+        selectedChoice.parentElement.classList.remove(squidAnswers);
+        //Load New Question
+        getNewQuestion();
+      }, 1000);//sets a delay 
+    });
+  });
   
 
   beginGame();
