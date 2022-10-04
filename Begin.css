@@ -13,12 +13,6 @@ body {
     padding: 0;/*reset padding*/
 }
 
-/*h3 { 
-    display: block;
-    text-align: right;
-    color: orangered;
-   
- }*/
 /*game container centered on page*/
 .container {
     width: 100vw;
@@ -28,7 +22,7 @@ body {
     align-items: center;
     max-width: 750px;
     margin: 0 auto;
-    color: maroon;
+    color: orangered;
     padding: 12px;
 }
 
@@ -92,4 +86,8 @@ body {
 .incorrect {
     background-color: red;
 }
+#heazupdisplay {
+    display: flex;
+    justify-content: space-between;
+  }
   
