@@ -145,7 +145,11 @@ let questions = [
     if (selectedAnswer == currentQuestion.answer) {
          squidAnswers = "correct";
     }
-     console.log(squidAnswers);
+     //console.log(squidAnswers);
+
+     if (squidAnswers === "correct") {
+         incrementScore(CORRECT_POINTS);
+     }
 
      //gives red-incorrect and green-incorrect when player chooses answers
      selectedChoice.parentElement.classList.add(squidAnswers);
@@ -159,7 +163,7 @@ let questions = [
 
   incrementScore = num => {
     score += num;
-    squidAnswers.innerHTML = "Score: " + score;
+    Squidscore.innerText = "Score: " + score;
   };
   
 
