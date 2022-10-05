@@ -10,7 +10,7 @@ let selectingAnswers = false;
 let score = 0;
 let questionCounter = 0;
 let availableQuestions = [];
-
+let Squidtimer = 100;
 let questions = [
     {
       question: "Which mask shape had the highest authority?",
@@ -108,6 +108,18 @@ let questions = [
       availableQuestions = [...questions];
       console.log(availableQuestions);
       getNewQuestion();
+
+      let playertime = setInterval(() => {
+          Squidtimer-=5
+          //console.log(Squidtimer);
+          let Squidcount = document.getElementById("Squidtimer");
+          //console.log(Squidcount);
+          Squidcount.innerText = `Timer: ${Squidtimer}`
+          if (Squidtimer < 0){
+              clearInterval(playertime)
+          }
+      }, 1000);
+
   };
   
   getNewQuestion = () => {
