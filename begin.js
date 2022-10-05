@@ -1,6 +1,9 @@
 const question = document.getElementById("question");
 const selections = Array.from(document.getElementsByClassName("question-text"));
-//console.log(selections);
+let squidQuestionCounter = document.getElementById("squidQuestionCounter");
+const Squidscore = document.getElementById("Squidscore");
+
+console.log(selections);
 
 let currentQuestion = {};
 let selectingAnswers = false;
@@ -91,7 +94,7 @@ let questions = [
       }
   ];
 
-  const CORRECT_POINTS = 5;
+  const CORRECT_POINTS = 500;
   const MAX_QUESTIONS = 10;
 
   //arrow functions & notes used to define our trivia container question and answers behavior
@@ -108,11 +111,13 @@ let questions = [
   };
   
   getNewQuestion = () => {
-      //Below code will send the player to the players page to log in their name / initials
+      //Below code will send the player to the playerscores.html page to log in their name / initials
        if (availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
            return location.assign("playerscores.html")
        }        
       questionCounter++;
+      squidQuestionCounter.innerText = questionCounter + "/" + MAX_QUESTIONS;
+
       const questionIndex = Math.floor(Math.random() * availableQuestions.length);
       currentQuestion = availableQuestions[questionIndex];
       question.innerText = currentQuestion.question;
@@ -122,11 +127,11 @@ let questions = [
           const number = choice.dataset["number"];
           choice.innerHTML = currentQuestion["choice" + number];
       });
-
+      //Remove the question from available questions
       availableQuestions.splice(questionIndex, 1);
       selectingAnswers = true;
   };
-  
+    
   selections.forEach(choice => {
       choice.addEventListener("click", e => {
 
@@ -151,6 +156,11 @@ let questions = [
       }, 1000);//sets a delay 
     });
   });
+
+  incrementScore = num => {
+    score += num;
+    squidAnswers.innerHTML = "Score: " + score;
+  };
   
 
   beginGame();
