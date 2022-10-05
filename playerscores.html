@@ -16,9 +16,24 @@
         <div id="home" class="flex-center flex-column">
             <a class="button" href="Begin.html">Try Again</a>
             <a class="button" href="index.html">Go to the beginning</a>   
+
+            <form>
+                <input
+            type="text"
+            name="playername"
+            id="playername"
+            placeholder="playername"
+            />
+            <button
+            type="submit"
+            class="button"
+            id="savePlayerscore"
+            onclick="saveHighScore(event)"
+            > Save Your Score
+              </button>
+            </form>
         </div>
     </div>
-
-    
-</body>
+    <script src="playerscores.js"></script>
+  </body>
 </html>

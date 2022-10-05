@@ -29,7 +29,7 @@ let questions = [
       answer: 4
     },
     {
-      question: "What number did the Oh Il-Nam/the old man wear on his jacket?",
+      question: "What number did Oh Il-Nam/the old man wear on his jacket?",
       choice1: "001",
       choice2: "422",
       choice3: "677",
